@@ -6,6 +6,6 @@ class Dash < Hash
 
 		#Attempt to index this guy via the the index requested
 	def method_missing( sym, *args )
-		(args.size == 0)? self[sym]: self[sym] = args[0]
+		(args.size == 0)? self[sym] || self[sym.to_s]: self[sym] = args[0]
 	end
 end
