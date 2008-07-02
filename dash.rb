@@ -1,7 +1,7 @@
 class Dash < Hash
 		#Load in a user's hash if they give me one
 	def initialize( hash = nil )
-		hash.each { |k, v| self[k] = v } if hash.is_a? Hash
+		hash.each { |k, v| self[k] = v } if !hash.nil?
 	end
 
 		#Attempt to index this guy via the the index requested
